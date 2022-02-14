@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+                <ul class="nav">
+                    <li>@Html.ActionLink("Гостевая книга", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Добавить гостя", "Add", "Home")</li>                   
+                </ul>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - GuestBook ASP.NET</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>

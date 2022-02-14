@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Таблица";
+}
+
+<div class="jumbotron">
+    <h1>Книга гостей</h1>
+    <p class="lead">Здесь представлена таблица книги гостей.</p>
+</div>
+<div>
+    <table cellspacing="2" border="1" cellpadding="5">
+        <tr>
+            <td>Id</td>
+            <td>Username</td>
+            <td>E-mail</td>
+            <td>Homepage</td>
+            <td>IP</td>
+            <td>Browser</td>
+            <td>Text</td>
+        </tr>
+        @foreach (var b in ViewBag.Guests)
+        {
+            <tr>
+                <td><p>@b.Id</p></td>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Email</p></td>
+                <td><p>@b.Homepage</p></td>
+                <td><p>@b.IP</p></td>
+                <td><p>@b.Browser</p></td>
+                <td><p>@b.Text</p></td>
+            </tr>
+        }
+
+    </table>
+</div>

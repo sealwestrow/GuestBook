@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Форма добавления";
+}
+
+    <div>
+        <h3>Форма добавления гостя</h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.Browser" name="Browser" />
+            <input type="hidden" value="@ViewBag.IP" name="IP" />
+            <table>
+                <tr>
+                    <td><p>Введите имя </p></td>
+                    <td><input type="text" name="Name" pattern=^[A-Za-z0-9]+$ required />(Только латинские буквы и цифры)</td>
+                </tr>
+                <tr>
+                    <td><p>Введите Email:</p></td>
+                    <td><input type="email" name="Email" required /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите Homepage:</p></td>
+                    <td><input type="url" name="Homepage" value="http://" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите текст:</p></td>
+                    <td><textarea type="text" name="Text" cols="30" rows="4" required></textarea></td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
